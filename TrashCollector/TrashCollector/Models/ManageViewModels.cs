@@ -15,7 +15,7 @@ namespace TrashCollector.Models
     }
 
     public class ManageLoginsViewModel
-    {
+    {//C:\Users\Student\Desktop\TrashCollector\TrashCollector\TrashCollector\Models\ManageViewModels.cs
         public IList<UserLoginInfo> CurrentLogins { get; set; }
         public IList<AuthenticationDescription> OtherLogins { get; set; }
     }

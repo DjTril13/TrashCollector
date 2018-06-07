@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TrashCollector.Models;
+using TrashCollector.ViewModels;
 
 namespace TrashCollector.Controllers
 {
@@ -22,7 +23,16 @@ namespace TrashCollector.Controllers
             _context.Dispose();
         }
 
+        public ActionResult New()
+        {
+            var pickupDay = _context.PickupDay.ToList();
+            var viewModel = new NewCustomerViewModel
+            {
+                PickupDay = pickupDay
+            };
 
+            return View(viewModel);
+        }
         public ViewResult Index()
         {
             var customers = _context.Customers.ToList();

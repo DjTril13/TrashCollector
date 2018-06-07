@@ -9,8 +9,13 @@ namespace TrashCollector.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public int Address { get; set; }
 
-        //address
+
+        //string street name
+        //int Zip
+
+
 
         public PickupDay PickupDay { get; set; }    //this is the literal object off Pickupday, being the day/price 
         public int PickupDayId { get; set; }        //this is just a key to the type of PickupDay on the table
